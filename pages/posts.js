@@ -1,12 +1,10 @@
 import Head from "next/head";
+import { MainLayout } from "../components/MainLayout";
 
 export default () => {
   return (
-    <>
-      <Head>
-        <title>Next posts</title>
-      </Head>
+    <MainLayout title="Posts Page">
       <h1>Posts page</h1>
-    </>
+    </MainLayout>
   );
 };

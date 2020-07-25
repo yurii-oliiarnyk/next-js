@@ -17,7 +17,7 @@ export default function Post({ post: serverPost }: PostPageProps) {
   useEffect(() => {
     const load = async () => {
       const { id } = query;
-      const response = await fetch(`http://localhost:4200/posts/${id}`);
+      const response = await fetch(`${process.env.baseUrl}/${id}`);
       const post: MyPost = await response.json();
       setPost(post);
     };
@@ -59,7 +59,7 @@ Post.getInitialProps = async ({ query, req }: PostNextPageContext) => {
   }
 
   const { id } = query;
-  const response = await fetch(`http://localhost:4200/posts/${id}`);
+  const response = await fetch(`${process.env.baseUrl}/posts/${id}`);
   const post: MyPost = await response.json();
 
   return { post };

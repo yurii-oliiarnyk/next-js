@@ -1,8 +1,7 @@
 import Link from "next/link";
-import Head from "next/head";
 import { MainLayout } from "../components/MainLayout";
 
-export default () => {
+export default function Index() {
   return (
     <MainLayout title="Home Page">
       <h1>Home NextJS!</h1>
@@ -19,4 +18,4 @@ export default () => {
       <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
     </MainLayout>
   );
-};
+}
